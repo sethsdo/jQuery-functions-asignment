@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>jQuery Functions Asignment</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+        <link href="javascript.js" rel="javascript">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $("img").hide();
+            $(document).ready(function () {
+                    console.log("hello");
+                $("#button1").click(function () {
+                        $("#classAdd").css('background-color', 'red');
+                    });
+                $("img").hide();
+                $("#button2").click(function () {
+                        $("img").slideToggle("slow", function () {
+                            // Animation complete.
+                        });
+                });
+                $("#button3").click(function () {
+                    $("#appendPara").append('<p>Similar to other content-adding methods such as .prepend() and .before(), .append() also supports passing in multiple arguments as input. Supported input includes DOM elements, jQuery objects, HTML strings, and arrays of DOM elements.</p>');
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+        <div id="container">
+            <div class="box" id="classAdd">
+                <h1>AddClass</h1>
+                <div class="formating">
+                    <button id="button1">AddClass</button>
+                    <p>Click the button to add class 'red' to this paragraph</p>
+                </div>
+            </div>
+            <div class="box-divider"></div>
+            <div class="box" id="toggleSlide">
+                <h1>SlideToggle</h1>
+                <div class="formating">
+                    <button id="button2">SlideToggle</button>
+                    <p>Click the button to slidetoggle a hidden image</p>
+                    <img src="img-1.jpg" alt="man taking a photo">
+                </div>
+            </div>
+            <div class="box-divider"></div>
+            <div class="box" id="appendFunc">
+                <h1>Append</h1>
+                <div class="formating">
+                    <button id="button3">Append</button>
+                    <p id="appendPara">Click the button to append a new paragraph <span id="add_here"></span></p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
